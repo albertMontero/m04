@@ -21,7 +21,7 @@
     <script>
       function changeTitle() {
         const titleElement = document.getElementById("title");
-        titleElement.textContent = "Hola, JavaScript!";
+        titleElement.innerText = "Hola, JavaScript!";
       }
     </script>
   </body>
@@ -836,7 +836,7 @@ saveButton.addEventListener("click", function () {
 function showGreeting() {
   const savedUsername = localStorage.getItem("username");
   if (savedUsername) {
-    greeting.textContent = `Hola, ${savedUsername}!`;
+    greeting.innerText = `Hola, ${savedUsername}!`;
   }
 }
 
@@ -870,7 +870,7 @@ function incrementVisitCount() {
   let visitCount = localStorage.getItem("visitCount");
   visitCount = visitCount ? parseInt(visitCount) + 1 : 1;
   localStorage.setItem("visitCount", visitCount);
-  visitCountDisplay.textContent = `Visites: ${visitCount}`;
+  visitCountDisplay.innerText = `Visites: ${visitCount}`;
 }
 
 // Carregar el comptador al carregar la pàgina
@@ -979,7 +979,7 @@ Crea un formulari amb un camp d'entrada de text i un botó. Quan l'usuari clica 
   function displayText() {
     const inputText = document.getElementById("inputText").value;
     const output = document.getElementById("output");
-    output.textContent = inputText;
+    output.innerText = inputText;
   }
 </script>
 ```
@@ -1167,7 +1167,7 @@ Crea un paràgraf i un botó que afegeixi un text nou al final del paràgraf cad
 <script>
   function appendText() {
     const paragraph = document.getElementById("text");
-    paragraph.textContent += " Text afegit.";
+    paragraph.innerText += " Text afegit.";
   }
 </script>
 ```
@@ -1283,7 +1283,7 @@ Escriu un JavaScript que faci que, quan es faci clic en un botó, el text d'un e
 const changeTextButton = document.querySelector("#changeTextButton");
 changeTextButton.addEventListener("click", function (event) {
   const textParagraph = event.target.parentElement.querySelector(".text");
-  textParagraph.textContent = "Text canviat!";
+  textParagraph.innerText = "Text canviat!";
 });
 ```
 
@@ -1379,7 +1379,7 @@ items.forEach((item) => {
   item.addEventListener("click", function (event) {
     const sibling = event.target.nextElementSibling;
     if (sibling) {
-      sibling.textContent = "Text canviat!";
+      sibling.innerText = "Text canviat!";
     }
   });
 });
